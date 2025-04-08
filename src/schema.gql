@@ -1,0 +1,20 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type CartItem {
+  id: String!
+  name: String!
+  quantity: Float!
+  price: Float!
+}
+
+type Query {
+  cartItems: [CartItem!]!
+}
+
+type Mutation {
+  addItem(id: String!, name: String!, quantity: Float!, price: Float!): CartItem!
+  updateItem(id: String!, quantity: Float!): CartItem
+  removeItem(id: String!): CartItem
+}
